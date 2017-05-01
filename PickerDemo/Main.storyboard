@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Gkg-Ci-wXS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12072"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="peI-hb-9pR">
+                                <rect key="frame" x="10" y="129" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7dc-He-n1I"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qRe-to-7gS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select country name to be passed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw1-EQ-oXU">
+                                <rect key="frame" x="10" y="84" width="355" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="VvG-s8-evH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTO-Ye-nfH">
+                                <rect key="frame" x="164" y="184" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2fe-cw-9fG"/>
+                                    <constraint firstAttribute="width" constant="46" id="xcY-Ih-mjR"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="btnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pcn-LW-ELO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Fw1-EQ-oXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="3Ed-dn-vky"/>
+                            <constraint firstItem="peI-hb-9pR" firstAttribute="top" secondItem="Fw1-EQ-oXU" secondAttribute="bottom" constant="20" id="BKb-rU-HzG"/>
+                            <constraint firstItem="peI-hb-9pR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="JyG-xr-iKX"/>
+                            <constraint firstAttribute="trailing" secondItem="peI-hb-9pR" secondAttribute="trailing" constant="10" id="LiH-if-fS4"/>
+                            <constraint firstAttribute="trailing" secondItem="Fw1-EQ-oXU" secondAttribute="trailing" constant="10" id="Lxi-9N-PAy"/>
+                            <constraint firstItem="nTO-Ye-nfH" firstAttribute="top" secondItem="peI-hb-9pR" secondAttribute="bottom" constant="25" id="NWn-bR-VjE"/>
+                            <constraint firstItem="nTO-Ye-nfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UE8-xx-vVu"/>
+                            <constraint firstItem="Fw1-EQ-oXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="lBj-Ev-KEf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tGS-iF-73e"/>
+                    <connections>
+                        <outlet property="txtSelect" destination="peI-hb-9pR" id="gCI-Si-Va3"/>
+                        <segue destination="kdE-89-N1Q" kind="show" identifier="passCountry" id="RKa-SY-zcO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.8" y="114.69265367316342"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="s17-Md-XqI">
+            <objects>
+                <viewController id="kdE-89-N1Q" customClass="SecondViewController" customModule="PickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ICK-bF-u9G"/>
+                        <viewControllerLayoutGuide type="bottom" id="WVZ-wt-7om"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ud8-HR-yr9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected country name is :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9N2-Dp-Rst">
+                                <rect key="frame" x="10" y="84" width="355" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qYQ-Oe-VS9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-kP-fKp">
+                                <rect key="frame" x="10" y="129" width="355" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SSP-Xu-gZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9N2-Dp-Rst" firstAttribute="top" secondItem="ICK-bF-u9G" secondAttribute="bottom" constant="20" id="Jup-IW-KBI"/>
+                            <constraint firstItem="9N2-Dp-Rst" firstAttribute="leading" secondItem="Ud8-HR-yr9" secondAttribute="leading" constant="10" id="N0J-Nq-F1p"/>
+                            <constraint firstItem="mdv-kP-fKp" firstAttribute="top" secondItem="9N2-Dp-Rst" secondAttribute="bottom" constant="20" id="hPH-U1-orR"/>
+                            <constraint firstItem="mdv-kP-fKp" firstAttribute="leading" secondItem="Ud8-HR-yr9" secondAttribute="leading" constant="10" id="jeH-ZL-B8R"/>
+                            <constraint firstAttribute="trailing" secondItem="9N2-Dp-Rst" secondAttribute="trailing" constant="10" id="mqS-4X-goG"/>
+                            <constraint firstAttribute="trailing" secondItem="mdv-kP-fKp" secondAttribute="trailing" constant="10" id="xNF-2P-btr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="38I-mK-qyE"/>
+                    <connections>
+                        <outlet property="lblCountryName" destination="mdv-kP-fKp" id="bwc-2F-dWo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oj1-Tj-L1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920.8" y="114.69265367316342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iSm-Ar-dNO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gkg-Ci-wXS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PSK-J2-y9a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lQ7-fi-rbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hx7-OH-3P4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317.60000000000002" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>
